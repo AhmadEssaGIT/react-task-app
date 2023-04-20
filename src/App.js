@@ -44,6 +44,7 @@ function App() {
     await fetch(`http://127.0.0.1:5000/tasks/${id}`, {
       method: "DELETE",
     });
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   // Toggle Reminder
